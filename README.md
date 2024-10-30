@@ -11,7 +11,7 @@
 
 ---
 
-# WriteUp Akses Server Base OS dengan protokol SSH
+# Implementasi Akses Server Base OS dengan SSH
 ## 1. Defenisi
 SSH (Secure Shell) merupakan protokol kriptografi yang memungkinkan akses, kontrol, dan modifikasi pada sistem server jarak jauh. Ini Merujuk pada rangkaian utilitas yang mengimplementasikan protokol SSH. Secure Shell menyediakan autentikasi kata sandi yang kuat dan autentikasi kunci publik, serta komunikasi data terenkripsi antara dua komputer yang terhubung melalui jaringan terbuka, seperti internet. SSH penting untuk menjaga keamanan sistem, karena protokol ini bertindak sebagai cara yang aman untuk menyediakan akses dan manajemen sistem jaringan. Cara Protokol ssh bekerja dapat dilihat pada [link ini](https://www.ipxo.com/app/uploads/2022/02/How-does-SSH-work.jpg) 
 
