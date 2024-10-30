@@ -20,6 +20,6 @@ SSH (Secure Shell) adalah protokol kriptografi yang memungkinkan akses, kontrol,
 
 untuk host side yang dibutuhkann merupkan sebuah operation system berbasis server, dalam hal ini saya menggunakan Ubuntu LTS server yang dapat diunduh di [Link Referensi](https://ubuntu.com/download/server)
 setelah melakukan import file image virtual box maka aka tampil tampilan ui sebagai berikut:
+![Screenshot (996)](https://github.com/user-attachments/assets/5953b968-64bc-40ec-8f91-04535b921ef9)
 
-[![](https://github.com/exvzu07/TugasLinuxServer_Sistem_Operasi_Rafi_Afdhal_09011282328040_SK3A/issues/1#issue-2622924516)]
 
