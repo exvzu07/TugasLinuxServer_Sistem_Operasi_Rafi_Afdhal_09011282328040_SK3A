@@ -1,4 +1,4 @@
-# TugasLinuxServer_Sistem_Operasi_Rafi_Afdhal_09011282328040_SK3A
+# 09011282328040_Rafi_Afdhal_SK3A_TugasLinuxServer_Sistem_Operasi
 
    **Nama: Rafi Afdhal**
    
@@ -13,28 +13,28 @@
 
 # WriteUp Akses Server Base OS dengan protokol SSH
 ## 1. Defenisi
-SSH (Secure Shell) adalah protokol kriptografi yang memungkinkan akses, kontrol, dan modifikasi pada sistem server jarak jauh. Protokol ini menggunakan kunci kriptografi publik dan privat untuk memvalidasi sistem komputer jarak jauh dan memungkinkan komunikasi melalui transmisi data yang sensitif, sehingga memastikan keamanan dan integritas dalam komunikasi jarak jauh. berdasarkan [informasi grafis](https://www.ssh.com/hs-fs/hubfs/SSH_Client_Server.png?width=556&name=SSH_Client_Server.png) ini menjelaskan bagaimanaa protokol ssh bekerja.
+SSH (Secure Shell) merupakan protokol kriptografi yang memungkinkan akses, kontrol, dan modifikasi pada sistem server jarak jauh. Ini Merujuk pada rangkaian utilitas yang mengimplementasikan protokol SSH. Secure Shell menyediakan autentikasi kata sandi yang kuat dan autentikasi kunci publik, serta komunikasi data terenkripsi antara dua komputer yang terhubung melalui jaringan terbuka, seperti internet. SSH penting untuk menjaga keamanan sistem, karena protokol ini bertindak sebagai cara yang aman untuk menyediakan akses dan manajemen sistem jaringan. Cara Protokol ssh bekerja dapat dilihat pada [link ini](https://www.ipxo.com/app/uploads/2022/02/How-does-SSH-work.jpg) 
 
 ## 2. Alat dan Bahan 
 ### 2.1 Host Side Operation System
 
-Untuk host side yang dibutuhkann merupakan sebuah operation system berbasis server, dalam hal ini saya menggunakan Ubuntu LTS server yang dapat diunduh di [Link Referensi](https://ubuntu.com/download/server).
+Untuk host side yang dibutuhkann merupakan sebuah operation system berbasis server, dalam hal ini saya menggunakan Ubuntu LTS server yang dapat diunduh di [Link Ubuntu LTS](https://ubuntu.com/download/server).
 Diperlukan penginstalan secara manual jika menggunakan server ini. User dapat mengikuti konfigurasi seperti berikut :
 ![Screenshot (958) copy](https://github.com/user-attachments/assets/037d17c6-7bf5-4470-9fce-f7d0f408cc6e)
 
-#### - Selanjutnya, lakukan konfigurasi yang terdapat pada linux server tersebut. Jika mengalami Error seperti : 
+#### Selanjutnya, lakukan konfigurasi yang terdapat pada linux server tersebut. Jika mengalami Error seperti ini : 
 ![Screenshot (962) copy](https://github.com/user-attachments/assets/fbc9fafd-adf6-4f82-963d-3b3ef83cd234)
 
-#### - Maka, user diharuskan memasukkan file .iso yang telah diunduh sebelumnya
+#### Maka, user diharuskan memasukkan file .iso yang telah diunduh sebelumnya
 
 ![Screenshot (961) copy](https://github.com/user-attachments/assets/d1d0a3b5-0ca0-4a8b-b7ae-fb5bcf999edf)
 
-#### - Setelah melakukan konfigurasi, User akan perlu melakukan restart sebelum dapat menjalankan Linux servernya. Setelah melakukan restart dan login kembali, user akan mendapati tampilan linux servernya sebagai berikut :
+#### Setelah melakukan konfigurasi, User akan perlu melakukan restart sebelum dapat menjalankan Linux servernya. Setelah melakukan restart dan login kembali, user akan mendapati tampilan linux servernya sebagai berikut :
 ![Screenshot 2024-10-31 000116](https://github.com/user-attachments/assets/e596b566-e800-445e-b25a-1b33ca3fd1dd)
 
 ### 2.2 Client Side Operation System
   
-Untuk client side, User dapat memilih Sistem Operasi yang hendak digunakan. Karena untuk melakukan koneski yang paling dibutuhkan adalah kemampuan dari operasi sistem untuk melakukan koneksi ke server dengan protokol ssh. Dalam hal ini, saya menggunakan Sistem Operasi Linux Mint untuk melakukan koneksi ke Server. User dapat menggunakan [Tools Open-SSH](https://ubuntu.com/server/docs/openssh-server) untuk melakukan koneksi tampilan awal dari openssh seperti berikut:
+Untuk client side, User dapat memilih Sistem Operasi yang hendak digunakan. Karena untuk melakukan koneski yang paling dibutuhkan adalah kemampuan dari operasi sistem untuk melakukan koneksi ke server dengan protokol ssh. Dalam hal ini, saya menggunakan Sistem Operasi Linux Mint (Cinnamon Edition) untuk melakukan koneksi ke Server, yang dapat diunduh dengan mengeklik [Link Linux Mint](https://www.linuxmint.com/edition.php?id=316). User dapat menggunakan [Tools Open-SSH](https://ubuntu.com/server/docs/openssh-server) untuk melakukan koneksi tampilan awal dari openssh seperti berikut:
 
 ![Screenshot 2024-10-31 000823](https://github.com/user-attachments/assets/ad9348fe-9cf0-4251-8951-c9ce6e1db974)
 
@@ -63,22 +63,22 @@ $ sudo systemctl enable ssh
 
 ## NOTABENE #1 :
 Pastikan Konfigurasi terhubung ke Bridge Adapter (Jika Menggunakan VirtualBox)
-![Screenshot 2024-10-30 213337](https://github.com/user-attachments/assets/982b89bc-746f-4d3d-99a4-73d43860b3e8)
+![Screenshot 2024-10-31 004326](https://github.com/user-attachments/assets/d31c15db-c0f1-444f-afd8-30e357c8053f)
 
-Pada Linux Mint nya, Install Tools yang diperlukan :
+#### Pada Linux Mint nya, Install Tools yang diperlukan :
 ```
 $ sudo apt install nmap
 ```
 
-#### 3.1.2 cek open port pada host server
-untuk mengecek alamat port yang terbuka pada host server, maka pada client side kita melakukan *Port Scanning* menggunakan tools [nmap](https://nmap.org/) dengan memasukkan perintah berikut ini
+#### 3.1.2 Memeriksa open port pada host server
+Untuk memeriksa alamat port yang terbuka pada host server, pada client side, User dapat melakukan *Port Scanning* menggunakan tools [nmap](https://nmap.org/). Lalu dengan memasukkan perintah berikut ini
 ```
 $ nmap <alamat ip Host Server>
 ```
 ![Screenshot 2024-10-30 222447](https://github.com/user-attachments/assets/c6d90898-25bd-4cf3-80da-faf673b2ea07)
 
-#### 3.1.3 melakukan koneksi pada default port untuk protokol ssh
-untuk melakukan koneksi ke host server pada default port yaitu 22  menggunakan protokol ssh dapat menggunakan perintah berikut ini
+#### 3.1.3 Melakukan koneksi pada default port untuk protokol ssh
+Untuk melakukan koneksi ke host server pada default port (22) dengan menggunakan protokol ssh, User dapat menggunakan perintah berikut ini
 ```
 $ ssh -p 22 <usernameHost@alamatiphost>
 ```
@@ -91,8 +91,8 @@ $ sudo su
 ```
 ![Screenshot 2024-10-30 223005](https://github.com/user-attachments/assets/0708bd95-d22d-46d1-a174-4b6f771b7b0a)
 
-#### 3.2.1 modifikasi file *ssh_config* 
-sebelum melakukan konfigurasi maka kita harus melakukan file backup agar file sistem utama tidak corrupt jika terjadi hal yang tidak diinginkan dengan memasukkan perintah berikut ini:
+#### 3.2.1 Modifikasi file *sshd_config* 
+Sebelum melakukan konfigurasi maka kita harus melakukan file backup agar file sistem utama tidak corrupt jika terjadi hal yang tidak diinginkan dengan memasukkan perintah berikut ini:
 ```
 $ cp /etc/ssh/sshd_config /etc/ssh/sshd_config.backup
 ```
