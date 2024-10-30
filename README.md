@@ -18,7 +18,7 @@ SSH (Secure Shell) adalah protokol kriptografi yang memungkinkan akses, kontrol,
 ## 2. hal yang dibutuhkan 
 ### 2.1 Host Side Operation System
 
-untuk host side yang dibutuhkann merupkan sebuah operation system berbasis server, dalam hal ini saya menggunakan sebuah wordpress server yang mana server ini menggunakan sistem operasi berbasis ubuntu yang dapat diunduh di [Link Referensi](https://www.vulnhub.com/entry/webgoat-1,365/)
+untuk host side yang dibutuhkann merupkan sebuah operation system berbasis server, dalam hal ini saya menggunakan Ubuntu LTS server yang dapat diunduh di [Link Referensi](https://ubuntu.com/download/server)
 setelah melakukan import file image virtual box maka aka tampil tampilan ui sebagai berikut:
 
 [![](https://github.com/exvzu07/TugasLinuxServer_Sistem_Operasi_Rafi_Afdhal_09011282328040_SK3A/issues/1#issue-2622924516)]
